@@ -6,11 +6,12 @@
 aNode *head;
 aNode *current;
 int main(){
+	
 	head = malloc(sizeof(aNode));
 	head->value = -1;
 	head->next = NULL;
 	int FalseName = 1;
-	int toRet;
+	int toRet, key;
 	FILE *in;
 	char fileName[500];
 
@@ -32,7 +33,18 @@ int main(){
 		}
 		else{add(toRet);}
 		}
-	prettyPrint;
 	
+	prettyPrint();
+
+	printf("Please provide the number you want removed from this list: \n");
+	scanf("%d", &key);
+
+	if(delete(key) == true){
+		printf("complete\n");
+	}
+	prettyPrint();
+
+
+
 return 0;
 }
