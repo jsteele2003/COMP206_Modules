@@ -31,7 +31,6 @@ aNode *find(int z){
 
 	if(head->value == z){
 		return head;
-		printf("head verified");
 	}
 	else{
 		while((iterator->value != z) && (iterator->next != NULL)){
@@ -54,7 +53,11 @@ bool delete(int y){
 
 	aNode *finder = find(y);
 
-	if(finder == head){
+	if(finder == NULL){
+		return false;
+	}
+
+	else if(finder == head){
 		//printf("head verified\n");
 		if(head->next != NULL){
 				head = head->next;
