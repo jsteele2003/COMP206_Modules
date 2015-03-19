@@ -1,18 +1,24 @@
 //Joe Steele, 260516386
+#ifndef __LIST_H_INCLUDED
+#define __LIST_H_INCLUDED
 
 #include <stdlib.h>
-#include <malloc.h>
 
+
+typedef enum { false, true } bool;
 
 typedef struct node {
     int value;
-    struct node * next;
+    struct node *next;
 } aNode;
 
-extern aNode * head;
+extern aNode *head;
+extern aNode *current;
 
 void add(int x);
 
-void prettyPrint(NODE * another);
+void prettyPrint();
 
-Boolean delete(int y);
+bool delete(int y);
+
+#endif
