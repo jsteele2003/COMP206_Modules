@@ -53,11 +53,12 @@ int main(){
 	else{
 		printf("Number was not found\n");
 	}
-	prettyPrint();
+	if(head != NULL){
+		prettyPrint();
 
-	printf("Would you like to repeat?\n");
-	scanf("%s", answer);
-
+		printf("Would you like to repeat?\n");
+		scanf("%s", answer);
+	}
 	}while((strcmp(answer, "YES") == 0)|| (strcmp(answer, "yes") == 0) || (strcmp(answer, "Y") == 0) || (strcmp(answer, "y") == 0) );\
 
 

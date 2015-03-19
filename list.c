@@ -58,12 +58,12 @@ bool delete(int y){
 	}
 
 	else if(finder == head){
-		//printf("head verified\n");
+		printf("head verified\n");
 		if(head->next != NULL){
 				head = head->next;
 			}
-			if(head->next == NULL){
-				free(head);
+		if(head->next == NULL){
+				head = NULL;
 			}
 		return true;
 	}
