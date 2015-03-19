@@ -1,6 +1,10 @@
-//Joe Steele
+//Joe Steele, 260516386
+#include "list.h" 
 
-typedef struct node {
-    int val;
-    struct node * next;
-} node;
+void add(int x){
+	struct aNODE *newNode;
+	newNode =(struct aNode *)malloc(sizeof(struct aNode));
+
+	newNode->head = x;
+
+}

@@ -1,14 +1,18 @@
 //Joe Steele, 260516386
 
-
 #include <stdlib.h>
-#include <stdio.h>
 #include <malloc.h>
 
 
 typedef struct node {
-    int val;
+    int value;
     struct node * next;
-} inode;
+} aNode;
 
-void add(int){};
+extern aNode * head;
+
+void add(int x);
+
+void prettyPrint(NODE * another);
+
+Boolean delete(int y);
