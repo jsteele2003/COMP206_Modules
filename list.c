@@ -15,6 +15,12 @@ void add(int x){
 	//printf("%d", newNode->value);
 }
 
-//void prettyPrint{
-
-//}
+void prettyPrint(){
+aNode *iterator;
+	iterator=head;
+	while(iterator->next != NULL){
+		printf("%d\n", iterator->value);
+		iterator = iterator->next;
+	}
+	printf("%d\n", iterator->value);
+}

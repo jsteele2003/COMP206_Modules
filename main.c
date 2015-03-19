@@ -6,7 +6,6 @@
 aNode *head;
 aNode *current;
 int main(){
-	head = NULL;
 	head = malloc(sizeof(aNode));
 	head->value = -1;
 	head->next = NULL;
@@ -33,14 +32,7 @@ int main(){
 		}
 		else{add(toRet);}
 		}
-	
-	aNode *iterator;
-	iterator=head;
-	while(iterator->next != NULL){
-		printf("%d\n", iterator->value);
-		iterator = iterator->next;
-	}
-	printf("%d\n", iterator->value);
+	prettyPrint;
 	
 return 0;
 }
