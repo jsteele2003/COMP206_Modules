@@ -81,11 +81,13 @@ bool delete(int y){
 		//finder points to a middle element
 		if(finder->next !=NULL){
 			deleter->next = deleter->next->next;
+			free(finder);
 		}
 
 		//finder points to the last element
 		if(finder->next == NULL){
 			deleter->next = NULL;
+			free(finder);
 		}
 
 		return true;	

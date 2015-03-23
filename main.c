@@ -42,7 +42,7 @@ int main(){
 		}
 		else{add(toRet);}
 		}
-	printf("The current list is\n:");
+	printf("The current list is:\n");
 	prettyPrint();
 
 
@@ -57,7 +57,7 @@ int main(){
 		printf("Number was not found\n");
 	}
 	if(head != NULL){
-		printf("The current list is\n:");
+		printf("The current list is:\n");
 		prettyPrint();
 
 		printf("Would you like to repeat?\n");
