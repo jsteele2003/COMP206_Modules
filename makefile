@@ -8,4 +8,4 @@ list.o: list.c list.h
 	gcc -c list.c
 
 clean:
-	rm -f program main.o list.o
+	rm *.o program 

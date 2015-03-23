@@ -58,7 +58,7 @@ bool delete(int y){
 	}
 
 	else if(finder == head){
-		printf("head verified\n");
+		//printf("head verified\n");
 		if(head->next != NULL){
 				head = head->next;
 			}
@@ -69,7 +69,8 @@ bool delete(int y){
 	}
 	
 	else if(finder->value == y){
-	
+		
+		//trailing pointer
 		aNode *deleter;
 		deleter=head;
 

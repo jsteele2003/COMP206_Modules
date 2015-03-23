@@ -21,29 +21,32 @@ int main(){
 	char answer[3] = "yes";
 
 	while(FalseName == 1){
-	printf("Please provide the name of the file to be parsed:\n");
-	scanf("%s", fileName);
-	in=fopen(fileName, "rt");
+		printf("Please provide the name of the file to be parsed:\n");
+		scanf("%s", fileName);
+		in=fopen(fileName, "rt");
 		if(in != NULL){
-		FalseName = 0;
+			FalseName = 0;
 		}
 		else(printf("Improper file name, \n"));
 	}
+
 	while(!feof(in)){
 		fscanf(in, "%d", &toRet);
+		
+		//catch the carriage return
 		fgetc(in);
+		
 		//printf("%d", toRet);
 		if(head->value == -1){
 			head->value=toRet;
 		}
 		else{add(toRet);}
 		}
-	
+	printf("The current list is\n:");
 	prettyPrint();
 
 
 	do{
-	
 	printf("Please provide the number you want removed from this list: \n");
 	scanf("%d", &key);
 
@@ -54,6 +57,7 @@ int main(){
 		printf("Number was not found\n");
 	}
 	if(head != NULL){
+		printf("The current list is\n:");
 		prettyPrint();
 
 		printf("Would you like to repeat?\n");
