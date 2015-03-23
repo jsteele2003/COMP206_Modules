@@ -47,21 +47,25 @@ int main(){
 
 
 	do{
-	printf("Please provide the number you want removed from this list: \n");
-	scanf("%d", &key);
+		if(head == NULL){
+			break;
+		}
+		printf("Please provide the number you want removed from this list: \n");
+		scanf("%d", &key);
 
-	if(delete(key) == true){
-		printf("Number was deleted\n");
-	}
-	else{
-		printf("Number was not found\n");
-	}
-	if(head != NULL){
-		printf("The current list is:\n");
-		prettyPrint();
+		if(delete(key) == true){
+			printf("Number was deleted\n");
+		}
+		else{
+			printf("Number was not found\n");
+		}
+		if(head != NULL){
+			printf("The current list is:\n");
+			prettyPrint();
 
-		printf("Would you like to repeat?\n");
-		scanf("%s", answer);
+			printf("Would you like to repeat?\n");
+			scanf("%s", answer);
+		
 	}
 	}while((strcmp(answer, "YES") == 0)|| (strcmp(answer, "yes") == 0) || (strcmp(answer, "Y") == 0) || (strcmp(answer, "y") == 0) );\
 
